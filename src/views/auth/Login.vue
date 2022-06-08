@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import * as authService from "@/services/auth.service.js"
+
 export default {
     data(){
         return {
@@ -31,8 +33,14 @@ export default {
         incrementar(){
             this.$store.dispatch('incrementarContador')
         },
-        ingresar(){
-            this.$store.dispatch('ingresarVuex', this.usuario)
+        async ingresar(){
+            try{
+                const {data} = await authService.loginConLaravel(this.usuario);
+                // console.log(data)
+                this.$store.dispatch('ingresarVuex', data)
+            }catch(error){
+                console.log("*********: ", error.message);
+            }
         }
     }
 
