@@ -43,6 +43,10 @@ router.beforeEach((to, from, next) => {
     if(store.state.usuario != null) {
       next()
     }
+    let token = localStorage.getItem("access_token")
+    if(token){
+      next()
+    }
     next("/login")
   }
   next();

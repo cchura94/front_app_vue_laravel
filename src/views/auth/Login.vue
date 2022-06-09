@@ -37,7 +37,10 @@ export default {
             try{
                 const {data} = await authService.loginConLaravel(this.usuario);
                 // console.log(data)
+                let token = data.access_token
+                localStorage.setItem("access_token", token)
                 this.$store.dispatch('ingresarVuex', data)
+                this.$router.push("/about")
             }catch(error){
                 console.log("*********: ", error.message);
             }
