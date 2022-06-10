@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="card">
     <h1>Mi Perfil</h1>
     {{ perfil }}
   </div>

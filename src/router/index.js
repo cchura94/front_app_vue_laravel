@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Login from '../views/auth/Login.vue'
 import store from "@/store"
 import App from './../App.vue';
+import Categoria from '../views/admin/categoria/Categoria'
 
 const routes = [
   {
@@ -29,6 +30,11 @@ const routes = [
           requireAuth: true
         }
       },
+      {
+        path: '/categoria',
+        name: 'categoria',
+        component: Categoria
+      }
       
     ]
   },
