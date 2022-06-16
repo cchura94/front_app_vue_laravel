@@ -4,6 +4,7 @@ import Login from '../views/auth/Login.vue'
 import store from "@/store"
 import App from './../App.vue';
 import Categoria from '../views/admin/categoria/Categoria'
+import Producto from '../views/admin/producto/Producto'
 
 const routes = [
   {
@@ -34,6 +35,11 @@ const routes = [
         path: '/categoria',
         name: 'categoria',
         component: Categoria
+      },
+      {
+        path: '/producto',
+        name: 'Producto',
+        component: Producto
       }
       
     ]
