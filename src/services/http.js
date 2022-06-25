@@ -1,7 +1,8 @@
 import axios from "axios"
 import router from '../router';
 
-export const urlbase = "http://127.0.0.1:8000/api";
+export const urlbase = "https://apiravel.herokuapp.com/api";
+export const urlbaseImagen = "https://apiravel.herokuapp.com/";
 
 export function http(){
 
